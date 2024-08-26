@@ -9,7 +9,8 @@
     <!--	<bean id="alien" class="com.jason.Alien" scope="prototype"> new bean instance is created each time -->
 
     <bean id = "alien" class = "com.jason.Alien" >
-        <property name="age" value="21"> </property>
+        <!-- Setter Injection Injection-->
+        <property name = "age" value=" 21"/>
         <property name="lap" ref="lap1"/>
     </bean>
     <bean id="lap1" class="com.jason.Laptop"/>
