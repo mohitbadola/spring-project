@@ -9,9 +9,25 @@
     <!--	<bean id="alien" class="com.jason.Alien" scope="prototype"> new bean instance is created each time -->
 
     <bean id = "alien" class = "com.jason.Alien" >
-        <!-- Setter Injection Injection-->
-        <property name = "age" value=" 21"/>
-        <property name="lap" ref="lap1"/>
+
+        <!-- Constructor Injection-->
+
+<!--        type work when different types of variables -->
+<!--        name, type should be defined in same order as constructor-->
+
+<!--        <constructor-arg type="int" value="21"/>-->
+<!--        <constructor-arg type="com.jason.Laptop" ref="lap1"/>-->
+
+<!--        <constructor-arg name="age" value="21"/>-->
+<!--        <constructor-arg name="lap" ref="lap1"/>-->
+
+        <!--        index is best way it is order free-->
+        <constructor-arg index="0" value="21"/>
+        <constructor-arg index="1" ref="lap1"/>
+
+        <!-- Setter Injection -->
+<!--        <property name = "age" value=" 21"/>-->
+<!--        <property name="lap" ref="lap1"/>-->
     </bean>
     <bean id="lap1" class="com.jason.Laptop"/>
 
