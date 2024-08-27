@@ -26,7 +26,7 @@ public class App
 //        Computer is interface hence it is also allowed
 //        Computer com = context.getBean( Computer.class);
 
-        Desktop desk = context.getBean(Desktop.class);
+//        Desktop desk = context.getBean(Desktop.class);
 
     }
 }
