@@ -25,13 +25,15 @@
 <!--        <constructor-arg name="age" value="21"/>-->
 <!--        <constructor-arg name="lap" ref="lap1"/>-->
 
-        <!--        index is best way it is order free-->
+        <!--        index is best way as it is order free-->
 <!--        <constructor-arg index="0" value="21"/>-->
 <!--        <constructor-arg index="1" ref="lap1"/>-->
 
     </bean>
     <bean id="comp1" class="com.jason.Laptop" primary="true"/>
-    <bean id="comp2" class="com.jason.Desktop"/>
+<!--  In singleton scope lazy-init create object when required or requested  -->
+<!--    but if non-lazy object is dependent on lazy object then lazy object is created with it -->
+    <bean id="comp2" class="com.jason.Desktop" lazy-init="true"/>
 
 </beans>
 
