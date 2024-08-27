@@ -12,7 +12,7 @@ public class App
     public static void main( String[] args )
     {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml"); //create a container
-        Alien obj1 = (Alien) context.getBean("alien");
+        Alien obj1 = context.getBean("alien", Alien.class);
 //        obj1.age = 24;
 //        obj1.setAge(21);
         System.out.println(obj1.getAge());
@@ -22,7 +22,11 @@ public class App
 //        System.out.println(obj2.age);
 //        obj2.code();
 
-        Desktop desk = (Desktop) context.getBean("comp2");
+//        Computer com = context.getBean( Desktop.class);
+//        Computer is interface hence it is also allowed
+//        Computer com = context.getBean( Computer.class);
+
+        Desktop desk = context.getBean(Desktop.class);
 
     }
 }

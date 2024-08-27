@@ -13,7 +13,7 @@
 
         <!-- Setter Injection -->
         <property name = "age" value=" 21"/>
-<!--        <property name="comp" ref="comp"/>-->
+        <property name="comp" ref="comp1"/>
 
         <!-- Constructor Injection-->
 <!--        type work when different types of variables -->
@@ -30,10 +30,11 @@
 <!--        <constructor-arg index="1" ref="lap1"/>-->
 
     </bean>
+
     <bean id="comp1" class="com.jason.Laptop" primary="true"/>
-<!--  In singleton scope lazy-init create object when required  -->
-<!--    but if non-lazy is dependent on lazy then it is created with it -->
-    <bean id="comp2" class="com.jason.Desktop" lazy-init="true"/>
+<!--  In singleton scope lazy-init create object when required or requested  -->
+<!--    but if non-lazy object is dependent on lazy object then lazy object is created with it -->
+    <bean class="com.jason.Desktop" lazy-init="true"/>
 
 </beans>
 
