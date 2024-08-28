@@ -14,12 +14,17 @@ public class App
     public static void main( String[] args )
     {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-        Desktop dt1 = context.getBean(Desktop.class);
-        dt1.compile();
 
-        Desktop dt2 = context.getBean(Desktop.class);
-        dt2.compile();
 
+        Alien obj1 = context.getBean(Alien.class);
+        System.out.println(obj1.getAge());
+        obj1.code();
+
+//        Desktop dt1 = context.getBean(Desktop.class);
+//        dt1.compile();
+//
+//        Desktop dt2 = context.getBean(Desktop.class);
+//        dt2.compile();
 
 
 
